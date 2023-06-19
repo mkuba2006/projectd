@@ -4,12 +4,13 @@ import React, { useState } from 'react';
 function App() {
   const [list, uplist] = useState([]);
 
-  const update = (UName, UAge) =>{
+  const update = (val) =>{
     uplist((pval)=>{
-      return[...pval,{name: UName, age: UAge, id: Math.random().toString()} ]
+      return[...pval,{name: val.name, age: val.year, id: Math.random().toString()} ]
     });
-    console.log(list);
+    console.log(val);
   };
+
 
   return (
     <div>
@@ -20,3 +21,20 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
+
+
+
+
+
+
+  // const update = (UName, UAge) =>{
+  //   uplist((pval)=>{
+  //     return[...pval,{name: UName, age: UAge, id: Math.random().toString()} ]
+  //   });
+  //   console.log(list);
+  // };
